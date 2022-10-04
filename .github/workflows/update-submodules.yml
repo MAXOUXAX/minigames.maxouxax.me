@@ -1,0 +1,22 @@
+name: Update Submodules
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  build-version:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v3
+
+    - name: Update git submodules
+      run: |
+        git config user.name "GitHub Submodules Updater"
+        git config user.email "<>"
+        git submodule foreach git pull
+        git commit BomberMan -m "Updated submodules"
+        git push
