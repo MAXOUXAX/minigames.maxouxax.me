@@ -20,6 +20,8 @@ jobs:
         git config user.name "GitHub Submodules Updater"
         git config user.email "<>"
         git config pull.rebase true
+        git config --list
+        git status
         git submodule foreach git pull
         git commit BomberMan -m "Updated submodules"
         git push
