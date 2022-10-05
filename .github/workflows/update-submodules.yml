@@ -3,6 +3,7 @@ name: Update Submodules
 on:
   schedule:
     - cron: "56 * * * *"
+  workflow_dispatch:
 
 jobs:
   build-version:
