@@ -16,12 +16,15 @@ jobs:
       with:
         submodules: recursive
 
-    - name: Update git submodules
+    - name: Configure git globally
       run: |
         git config --global user.name "GitHub Submodules Updater"
         git config --global user.email "<>"
         git config --global pull.rebase true
-        git submodule status BomberMan
+        
+
+    - name: Update git submodules
+      run: |
         git submodule update --init --recursive --remote
     
     - name: Commit and push changes
@@ -29,4 +32,4 @@ jobs:
       with:
         commit_message: Updated submodules
         commit_user_name: Minigames Updater
-        commit_author: Minigames Updater <actions@github.com> # defaults to author of the commit that triggered the run
+        commit_author: Minigames Updater <actions@github.com>
