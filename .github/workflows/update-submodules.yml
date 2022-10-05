@@ -23,5 +23,10 @@ jobs:
         git config --global pull.rebase true
         git submodule status BomberMan
         git submodule update --init --recursive --remote
-        git commit BomberMan -m "Updated submodules"
-        git push
+    
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Updated submodules
+        commit_user_name: Minigames Updater
+        commit_author: Minigames Updater <actions@github.com> # defaults to author of the commit that triggered the run
