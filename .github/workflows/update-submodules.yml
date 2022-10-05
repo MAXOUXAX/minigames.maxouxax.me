@@ -17,11 +17,10 @@ jobs:
 
     - name: Update git submodules
       run: |
-        git config user.name "GitHub Submodules Updater"
-        git config user.email "<>"
-        git config pull.rebase true
-        git config --list
-        git status
+        git config --global user.name "GitHub Submodules Updater"
+        git config --global user.email "<>"
+        git config --global pull.rebase true
+        git submodule status BomberMan
         git submodule foreach git pull
         git commit BomberMan -m "Updated submodules"
         git push
