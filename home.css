@@ -1,0 +1,170 @@
+@import url(https://fonts.bunny.net/css?family=poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --text-primary-color: #ffffff;
+    --text-subtitle-color: #97a3b8;
+    --text-anchor-color: #0ea5e9;
+    --text-anchor-hover-color: #60bcf8;
+    --background-color: #0d1120;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: var(--background-color);
+    color: var(--text-primary-color);
+}
+
+body {
+    min-height: 100%;
+}
+
+a {
+    color: var(--text-anchor-color);
+    text-decoration: none;
+}
+
+a.button-link {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: var(--text-anchor-color);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a.button-link:hover {
+    background: var(--text-anchor-hover-color);
+}
+
+a.button-link:focus {
+    background: var(--text-anchor-color);
+}
+
+a:not(.button-link):hover {
+    color: var(--text-anchor-hover-color);
+}
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    max-height: 500px;
+    position: relative;
+}
+
+.hero-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 20px 50px;
+    gap: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 30px 0px;
+    font-weight: 800;
+}
+
+.hero p {
+    text-align: justify;
+    width: 100%;
+    max-width: 400px;
+    color: var(--text-subtitle-color)
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+    margin: 0px 20px;
+}
+
+.games .game {
+    width: 400px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all .3s ease;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.games .game:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.games .game h2 {
+    word-break: break-all;
+}
+
+.games .game p {
+    color: var(--text-subtitle-color);
+    font-weight: 300;
+}
+
+.games .game img {
+    z-index: -1;
+    height: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 1%, transparent 100%);
+    opacity: .2;
+}
+
+footer {
+    margin-top: 80px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
