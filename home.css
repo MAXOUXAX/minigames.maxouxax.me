@@ -23,6 +23,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: box-shadow .3s ease;
 }
 
 html {
@@ -33,6 +34,8 @@ html {
 
 body {
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -52,7 +55,6 @@ a.button-link {
     background: var(--text-anchor-color);
     color: white;
     text-decoration: none;
-    transition: all 0.3s ease;
 }
 
 a.button-link:hover {
@@ -69,7 +71,7 @@ a:not(.button-link):hover {
 
 .hero {
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     max-height: 500px;
     position: relative;
 }
@@ -159,7 +161,7 @@ a:not(.button-link):hover {
 }
 
 footer {
-    margin-top: 80px;
+    margin-top: auto;
     width: 100%;
     height: 100px;
     display: flex;
