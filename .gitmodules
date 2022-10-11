@@ -1,3 +1,6 @@
 [submodule "BomberMan"]
 	path = BomberMan
 	url = git@github.com:Bozeyy/BomberMan.git
+[submodule "SpaceWar"]
+	path = SpaceWar
+	url = git@github.com:Bozeyy/SpaceWar.git
