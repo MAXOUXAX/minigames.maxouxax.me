@@ -46,7 +46,7 @@ a {
 a.button-link {
     display: inline-block;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     text-align: center;
     font-weight: 600;
     font-size: 1.2rem;
@@ -71,8 +71,15 @@ a:not(.button-link):hover {
 
 .hero {
     width: 100%;
-    min-height: 80vh;
-    max-height: 500px;
+    /*height: 80vh;
+    min-height: 300px;
+    max-height: 500px;*/
+    height: clamp(400px, 100vh, 900px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
     position: relative;
 }
 
@@ -87,7 +94,7 @@ a:not(.button-link):hover {
 
 .hero-content {
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 5vw;
     gap: 20px;
     position: relative;
     display: flex;
@@ -99,15 +106,24 @@ a:not(.button-link):hover {
 
 .hero h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(16px, 15vw, 6rem);
     margin: 30px 0px;
     font-weight: 800;
+}
+
+.hero .details {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px;
 }
 
 .hero p {
     text-align: justify;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
+    font-size: clamp(12px, 5vw, 1.5rem);
     color: var(--text-subtitle-color)
 }
 
@@ -118,19 +134,20 @@ a:not(.button-link):hover {
     align-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    padding: 25px;
+    padding: 100px 5vw;
     margin: 0px 20px;
 }
 
 .games .game {
-    width: 400px;
+    width: clamp(250px, 40vw, 600px);
     min-height: 200px;
     display: flex;
     flex-direction: column;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.05);
     transition: all .3s ease;
-    padding: 25px;
+    font-size: clamp(1em, 1vw, 1.5em);
+    padding: clamp(25px, 1.5%, 50px);
     position: relative;
     overflow: hidden;
 }
@@ -139,7 +156,7 @@ a:not(.button-link):hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.games .game h2 {
+.games .game {
     word-break: break-all;
 }
 
@@ -169,4 +186,5 @@ footer {
     align-items: center;
     align-content: center;
     background: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
